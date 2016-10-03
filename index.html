@@ -3,14 +3,33 @@
 <head>
  	<meta charset="UTF-8">
  	<title>Document</title>
-  	<script src="jquery-3.1.0.min.js"></script>   
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
  	<script src="www.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		.text{
+			width: 300px;
+			margin: .5rem;
+			outline: 0;
+			border: 0;
+			border-bottom: 1px solid #333;
+			background: transparent;
+		}
+		*{
+			color: #333;
+			background: #eee;
+		}
+		body{
+			background: #eee !important;
+		}
+	</style>
 </head>
 <body>
-	<input type="text" name="t1" class='form-control'>
-	<input type="text" name="t2" class='form-control'>
-	<input type="text" name="result" class='form-control'>
+	<h1>Calculator</h1>
+	<input type="text" name="t1" class='form-control text'>
+	<input type="text" name="t2" class='form-control text'>
+	<input type="button" value='計算' onclick='count()' class="btn btn-success">
+	<input type="text" id="result" name="result" class='form-control text'>
 	 	<script>
  		function count(){
 			var n1 = parseInt(document.getElementsByName("t1")[0].value);
